@@ -1,0 +1,14 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}Bar {{ bar.name }}{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <td>{{ bar.name }}</td>
+            <td>{{ bar.address }}</td>
+            <td>{{ bar.city }}</td>
+            <td>{{ bar.cp }}</td>
+        </tr>
+    </table>
+{% endblock %}

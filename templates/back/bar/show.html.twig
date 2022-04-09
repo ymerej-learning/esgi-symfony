@@ -1,0 +1,20 @@
+{% extends 'base_back.html.twig' %}
+
+{% block title %}Bar {{ bar.name }}{% endblock %}
+public
+{% block body %}
+    <h1>{{ bar.name }}</h1>
+    <table>
+        <tr>
+            <td>{{ bar.name }}</td>
+            <td>{{ bar.address }}</td>
+            <td>{{ bar.city }}</td>
+            <td>{{ bar.cp }}</td>
+            <td>
+                {% for categ in bar.categories %}
+                    {{ categ.name }}
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+{% endblock %}
